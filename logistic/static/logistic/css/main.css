@@ -1,0 +1,51 @@
+main {
+ color: #455d58;
+}
+
+.welcome {
+    background: url("../img/welcome.jpg");
+}
+
+.about {
+    background: url("../img/about.jpg");
+}
+
+.specials {
+    background: #cad5d8;
+}
+
+.form-request {
+    background: #cad5d8;
+}
+
+.main__row__margin {
+    margin-bottom: 0;
+}
+
+.main__welcome__header__margin {
+    margin-bottom: 80px;
+}
+
+.main__welcome__info__margin {
+    margin-bottom: 80px;
+}
+
+.main__welcome__input {
+}
+
+.main__welcome__form__margin {
+    margin-bottom: 40px;
+}
+
+.main__about__contacts {
+    font-size: 18px;
+    color: #f3e0bd;
+}
+
+.main__about__contacts__header {
+    border-bottom: 2px solid #f3e0bd;
+}
+
+footer {
+    background: #4e3b2e;
+}
