@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Сообщение</title>
+</head>
+<body>
+  <h1>{{ message }}</h1>
+  {% if timeout %}
+    <h1>
+      Вы будете перенаправлены в личный кабинет через
+      <span class="timeout-message-selector" data-redirect="{% url 'logistic:index' %}"></span>
+      сек.
+    </h1>
+  {% endif %}
+  <script type="text/javascript">
+    var counter = parseInt({{ timeout }});
+    var counterDisplay = $('.timeout-message-selector');
+    var interval = setInterval(function() {
+      counter--;
+      // Display 'counter' wherever you want to display it.
+      counterDisplay.text(counter);
+      if (counter == 0) {
+        clearInterval(interval);
+        // Display a login box
+        window.location.href = counterDisplay.data('redirect');
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
+
+

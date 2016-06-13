@@ -1,0 +1,11 @@
+dj-database-url==0.4.1
+Django==1.9.6
+django-widget-tweaks==1.4.1
+djangoajax==2.3.6
+gunicorn==19.6.0
+itsdangerous==0.24
+pathlib==1.0.1
+Pillow==3.2.0
+psycopg2==2.6.1
+six==1.10.0
+whitenoise==3.1
