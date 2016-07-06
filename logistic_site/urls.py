@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from logistic_site import settings
 
 urlpatterns = [
-    url(r'^logistic/', include('logistic.urls')),
+    url(r'^', include('logistic.urls')),
     url(r'^admin/', admin.site.urls),
 ]
 
