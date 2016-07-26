@@ -14,10 +14,12 @@
 <header>
   <nav>
     <div class="container">
-      <div class="nav-wrapper">
-        <a class="brand-logo">GOLDENLOG</a>
-        <a class="brand-logo right">+7(916)353-56-46</a>
-      </div>
+        <div class="nav-wrapper">
+            <a class="brand-logo nav__a__color__size">GOLDENLOG</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="nav__a__color__size">+7(916)353-56-46</a></li>
+            </ul>
+        </div>
     </div>
   </nav>
 </header>
@@ -31,29 +33,29 @@
             <h4>с нами выгодно</h4>
           </div>
           <div class="main__welcome__info__margin">
-            <p>Грузоперевозки</p>
-            <p>Узбекистан - Россия - Узбекистан</p>
+            <h5>Грузоперевозки</h5>
+            <h5>Узбекистан - Россия - Узбекистан</h5>
           </div>
           <div class="call-me">
             <div class="row">
               <form action="{% url 'logistic:index' %}" method="post">
                 {% csrf_token %}
                 {{ form.non_field_errors }}
-                <div class="input-field col s4">
+                <div class="input-field col s12 m12 l4">
                   <i class="material-icons prefix">perm_identity</i>
                   {{ form.name.errors }}
                   {{ form.name | add_class:"validate" | add_class:"main__welcome__input" }}
 {#                  <input id="your_name" type="text" class="validate main__welcome__input">#}
                   <label for="{{ form.name.id_for_label }}">Имя</label>
                 </div>
-                <div class="input-field col s4">
+                <div class="input-field col s12 m12 l4">
                   <i class="material-icons prefix">email</i>
                   {{ form.email.errors }}
                   {{ form.email | add_class:"validate" | add_class:"main__welcome__input" }}
 {#                  <input id="email" type="text" class="validate main__welcome__input">#}
                   <label for="{{ form.email.id_for_label }}">Email</label>
                 </div>
-                <div class="input-field col s4 main__welcome__form__margin">
+                <div class="input-field col s12 m12 l4 main__welcome__form__margin">
                   <i class="material-icons prefix">phone</i>
                   {{ form.phone.errors }}
                   {{ form.phone | add_class:"validate" | add_class:"main__welcome__input" }}
@@ -68,30 +70,48 @@
       </div>
     </div>
   </div>
+
   <div class="specials">
     <div class="container">
       <div class="row main__row__margin">
         <div class="col s12 main__specials center">
-          <div class="col s3">
-            <img src="" alt="">
-            <p>Страхование грузов</p>
+          <div class="col s12 m12 l3">
+              <div>
+                  <img class="specials__img__size" src="{% static 'logistic/img/insurance.png' %}" alt="">
+              </div>
+              <div>
+                  Страхование грузов
+              </div>
           </div>
-          <div class="col s3">
-            <img src="" alt="">
-            <p>Таможенное оформление</p>
+          <div class="col s12 m12 l3">
+              <div>
+                  <img class="specials__img__size" src="{% static 'logistic/img/tamo_work.png' %}" alt="">
+              </div>
+              <div>
+                  Таможенное оформление
+              </div>
           </div>
-          <div class="col s3">
-            <img src="" alt="">
-            <p>Маркировка грузов</p>
+          <div class="col s12 m12 l3">
+              <div>
+                  <img class="specials__img__size" src="{% static 'logistic/img/mark_package.png' %}" alt="">
+              </div>
+              <div>
+                  Маркировка грузов
+              </div>
           </div>
-          <div class="col s3">
-            <img src="" alt="">
-            <p>Низкие цены</p>
+          <div class="col s12 m12 l3">
+              <div>
+                  <img class="specials__img__size" src="{% static 'logistic/img/low_price.png' %}" alt="">
+              </div>
+              <div>
+                  Низкие цены
+              </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="about">
     <div class="container">
       <div class="row main__row__margin">
@@ -110,25 +130,39 @@
           </div>
           <div class="main__about__contacts">
             <div class="main__about__contacts__header">Наши контакты</div>
-            <div class="col s3">
-              <p>Телефон</p>
-              <p>++7(916)353-56-46</p>
+            <div class="col s12 m12 l3">
+              <p>Телефоны</p>
+              <p>+7(916)353-56-46</p>
               <p>+7(925)917-03-04</p>
             </div>
-            <div class="col s4">
+            <div class="col s12 m12 l4">
               <p>Email</p>
               <p>{{ '123@mail.ru' | urlize }}</p>
               <p>{{ '123453@mail.ru' | urlize }}</p>
             </div>
-            <div class="col s5">
+            <div class="s12 m12 l5">
               <p>Адрес</p>
               <p>Узбекистан, Ташкент, ул. Порлок, д.4</p>
             </div>
 
           </div>
-          <div class="main__about__contacts__social center">
-            <div class="col s6">watsapp +998 90 347 7964</div>
-            <div class="col s6">viber +7(925)917-03-04</div>
+          <div class="main__about__contacts__social">
+            <div class="col s12 m12 l6 center">
+                <div class="col s1">
+                    <img src="{% static 'logistic/img/whats_app.png' %}" alt="" class="contacts_icons">
+                </div>
+                <div class="col s5 contacts__social__number_padding">
+                    +998 90 347 7964
+                </div>
+            </div>
+            <div class="col s12 m12 l6 center">
+                <div class="col s1">
+                    <img src="{% static 'logistic/img/Viber-Icon.png' %}" alt="" class="contacts_icons">
+                </div>
+                <div class="col s5 contacts__social__number_padding">
+                    +7(925)917-03-04
+                </div>
+            </div>
           </div>
         </div>
       </div>
@@ -142,60 +176,60 @@
 
           <form>
             <div class="row">
-              <div class="input-field col s3">
-                <input id="full_form_name" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_name" type="text" class="validate" placeholder=" ">
                 <label for="full_form_name">Имя</label>
               </div>
-              <div class="input-field col s3">
-                <input id="full_form_company" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_company" type="text" class="validate" placeholder=" ">
                 <label for="full_form_company">Компания</label>
               </div>
-              <div class="input-field col s3">
-                <input id="full_form_phone" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_phone" type="text" class="validate" placeholder=" ">
                 <label for="full_form_phone">Контактный телефон</label>
               </div>
-              <div class="input-field col s3">
-                <input id="full_form_email" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_email" type="text" class="validate" placeholder=" ">
                 <label for="full_form_email">Email</label>
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s3">
-                <input id="full_form_send_date" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_send_date" type="text" class="validate" placeholder=" ">
                 <label for="full_form_send_date">Дата отправки груза</label>
               </div>
-              <div class="input-field col s5">
-                <input id="full_form_loading_adress" type="text" class="validate">
+              <div class="input-field col s12 m12 l5">
+                <input id="full_form_loading_adress" type="text" class="validate" placeholder=" ">
                 <label for="full_form_loading_adress">Адрес загрузки груза</label>
               </div>
-              <div class="input-field col s4">
-                <input id="full_form_landing_adress" type="text" class="validate">
+              <div class="input-field col s12 m12 l4">
+                <input id="full_form_landing_adress" type="text" class="validate" placeholder=" ">
                 <label for="full_form_landing_adress">Адрес выгрузки груза</label>
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s1">
-                <input id="full_form_cost" type="text" class="validate">
+              <div class="input-field col s12 m12 l1">
+                <input id="full_form_cost" type="text" class="validate" placeholder=" ">
                 <label for="full_form_cost">Стоимость груза</label>
               </div>
-              <div class="input-field col s1">
-                <input id="full_form_volume" type="text" class="validate">
+              <div class="input-field col s12 m12 l1">
+                <input id="full_form_volume" type="text" class="validate" placeholder=" ">
                 <label for="full_form_volume">Объем груза</label>
               </div>
-              <div class="input-field col s2">
-                <input id="full_form_weight" type="text" class="validate">
+              <div class="input-field col s12 m12 l2">
+                <input id="full_form_weight" type="text" class="validate" placeholder=" ">
                 <label for="full_form_weight">Общий вес груза</label>
               </div>
-              <div class="input-field col s2">
-                <input id="full_form_code" type="text" class="validate">
+              <div class="input-field col s12 m12 l2">
+                <input id="full_form_code" type="text" class="validate" placeholder=" ">
                 <label for="full_form_code">Код ТН ВЭД</label>
               </div>
-              <div class="input-field col s3">
-                <input id="full_form_size" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_size" type="text" class="validate" placeholder=" ">
                 <label for="full_form_size">Размеры грузовых мест</label>
               </div>
-              <div class="input-field col s3">
-                <input id="full_form_positions" type="text" class="validate">
+              <div class="input-field col s12 m12 l3">
+                <input id="full_form_positions" type="text" class="validate" placeholder=" ">
                 <label for="full_form_positions">Количество мест</label>
               </div>
             </div>

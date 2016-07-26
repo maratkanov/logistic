@@ -2,6 +2,27 @@ main {
  color: #455d58;
 }
 
+nav {
+    background-color: #4e7db1;
+}
+
+input[type=text], input[type=email] {
+    border-bottom: 1px solid #455d58 !important;
+}
+
+input[type=text]:focus:not([readonly]), input[type=email]:focus:not([readonly]) {
+    box-shadow: none !important;
+}
+
+label {
+    color: #455d58 !important;
+}
+
+.nav__a__color__size {
+    font-size: 2.1rem;
+    color: #f3dcb3 !important;
+}
+
 .welcome {
     background: url("../img/welcome.jpg");
 }
@@ -12,6 +33,12 @@ main {
 
 .specials {
     background: #cad5d8;
+    padding-bottom: 10px;
+}
+
+.specials__img__size {
+    height: 100px;
+    margin-top: 20px;
 }
 
 .form-request {
@@ -37,9 +64,17 @@ main {
     margin-bottom: 40px;
 }
 
-.main__about__contacts {
+.main__about__contacts, .main__about__contacts__social {
     font-size: 18px;
     color: #f3e0bd;
+}
+
+.contacts__social__number_padding {
+    padding: 4px 0 20px 5px !important;
+}
+
+.contacts_icons {
+    height: 40px;
 }
 
 .main__about__contacts__header {
