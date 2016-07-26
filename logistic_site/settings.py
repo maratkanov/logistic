@@ -83,14 +83,6 @@ WSGI_APPLICATION = 'logistic_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'logistic',
-        'USER': 'l_user',
-        'PASSWORD': 'el_passo',
-        'HOST': 'localhost',
-        'PORT': '',
-    },
-    'sqlite_default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
@@ -131,8 +123,8 @@ USE_TZ = True
 
 # Update database configuration with $DATABASE_URL.
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 
