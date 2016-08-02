@@ -24,7 +24,7 @@ label {
 }
 
 .welcome {
-    background: url("../img/welcome.jpg");
+    background: url("../img/welcome.jpg") no-repeat center center fixed;
 }
 
 .about {
